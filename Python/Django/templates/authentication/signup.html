@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an
+        <strong>outdated</strong>
+        browser. Please
+        <a href="#">upgrade your browser</a>
+        to improve your experience.
+      </p>
+    <![endif]-->
+
+    {% for message in messages %}
+    <div
+      class="alert alert-{{ message.tags }} alert-disvissible fade show"
+      role="alert"
+    >
+      <strong>Message:</strong>
+      {{ message }}
+      <button
+        type="submit"
+        class="close"
+        data-dismiss="alert"
+        aria-label="close"
+      >
+        <span aria-hiden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+
+    <h3>Sign Up</h3>
+
+    <form action="/signup" method="post">
+      {% csrf_token %}
+      <label for="">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="create a username"
+        required
+      />
+      <br />
+      <label for="">First Name</label>
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        placeholder="Enter First Name"
+        required
+      />
+      <br />
+
+      <label for="">Last Name</label>
+      <input
+        type="text"
+        name="lname"
+        id="lname"
+        placeholder="Enter Last Name"
+        required
+      />
+      <br />
+
+      <label for="">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Email Address"
+        required
+      />
+      <br />
+
+      <label for="">Password</label>
+      <input
+        type="password"
+        name="pass1"
+        id="pass1"
+        placeholder="Create a password"
+        required
+      />
+      <br />
+
+      <label for="">Confirm Password</label>
+      <input
+        type="password"
+        name="pass2"
+        id="pass2"
+        placeholder="Confirm Password"
+        required
+      />
+      <br />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <script src="" async defer></script>
+  </body>
+</html>
