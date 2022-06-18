@@ -14,4 +14,4 @@ def find_anagram(word, anagram):
 
     return True
 
-print(find_anagram('any', 'hii'))
+print(find_anagram('hello', 'elloh'))
