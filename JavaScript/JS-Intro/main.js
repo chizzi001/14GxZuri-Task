@@ -1,0 +1,1 @@
+alert('My name is Obinna Chidi \n I am 4ft Tall \n And I am from Nigeria');
